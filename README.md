@@ -28,9 +28,29 @@ Ensure you have Node.js and npm installed.
 ```sh
 git clone https://github.com/your-repo/weather-dashboard.git
 cd weather-dashboard
+```
 
 ### Install Dependencies
 Once you're in the project directory, install the required dependencies by running:
 
 ```sh
 npm install
+```
+## API Keys
+To use the weather APIs, you'll need API keys from OpenWeather and WeatherAPI.
+
+**OpenWeather API:** Sign up at OpenWeather and obtain your API key.
+**WeatherAPI:** Sign up at WeatherAPI for your API key.
+Once you have the keys, create a .env file in the root of your project and add the following:
+
+```sh
+REACT_APP_OPENWEATHER_API_KEY=your-openweather-api-key
+REACT_APP_WEATHERAPI_API_KEY=your-weatherapi-api-key
+```
+
+## Run the App
+After setting up the environment variables, start the development server by running:
+
+```sh
+npm start
+```
