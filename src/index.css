@@ -1,13 +1,157 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --primary-bg: #0d0f23;
+  --card-bg: #23274d;
+  --text-light: #ffffff;
+  --text-muted: #b0b3d6;
+  --accent: #4e80ee;
+  --border-radius: 12px;
+  --shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 12px;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--primary-bg);
+  color: var(--text-light);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+}
+
+/* Search Bar */
+.search-container {
+  width: 60%; /* Reduce width so it doesn't stretch too much */
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto;
+}
+
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: var(--card-bg);
+  padding: 12px;
+  border-radius: var(--border-radius);
+  width: 100%;
+  box-shadow: var(--shadow);
+}
+
+.search-bar input {
+  flex-grow: 1;
+  padding: 15px;
+  border-radius: var(--border-radius);
+  border: none;
+  background: var(--primary-bg);
+  color: var(--text-light);
+  outline: none;
+  font-size: 16px;
+}
+
+.search-bar button {
+  background: var(--accent);
+  color: var(--text-light);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px;
+  transition: 0.3s;
+}
+
+.search-bar button:hover {
+  background: #3c6dd1;
+}
+
+ul {
+  list-style: none; /* Removes bullets */
+  padding: 0;       /* Removes default left padding */
+  margin: 0;        /* Removes default margin */
+}
+
+.weather-container {
+  width: 80%;
+  max-width: 1200px; /* More width for a dashboard feel */
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 20px;
+  justify-content: center;
+  align-items: start;
+}
+
+/* Weather Card */
+.weather-card {
+  margin-top: 20px;
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  width: 100%;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.weather-card h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Favorite Locations & Journal */
+.favorites, .journal {
+  background: var(--card-bg);
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: var(--border-radius);
+  width: 100%;
+  box-shadow: var(--shadow);
+  text-align: center;
+  
+}
+
+.weather-journal {
+  background: var(--card-bg);
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: var(--border-radius);
+  width: 100%;
+  box-shadow: var(--shadow);
+  text-align: center;
+  
+}
+
+
+.favorites h2, .journal h2 {
+  font-size: 20px;
+  color: var(--accent);
+}
+
+/* Buttons */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+button {
+  background: var(--accent);
+  border: none;
+  padding: 12px 18px;
+  margin: 5px;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button-group button:hover {
+  background: #3c6dd1;
 }
